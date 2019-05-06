@@ -55,7 +55,7 @@ func Run(templatePath string, outputPath string) error {
 		|---|
 		| [Scott Rayapoullé](https://github.com/soulcramer) |
 		
-		[Your own name here?](https://www.patreon.com/eduardurbach)
+		Want to see [your own name here](https://www.patreon.com/eduardurbach)?
 		
 		## Author
 		

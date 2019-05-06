@@ -28,7 +28,7 @@ Generates `README.md` files for every subdirectory that has a `README.src.md` fi
 |---|
 | [Scott Rayapoullé](https://github.com/soulcramer) |
 
-[Your own name here?](https://www.patreon.com/eduardurbach)
+Want to see [your own name here](https://www.patreon.com/eduardurbach)?
 
 ## Author
 
