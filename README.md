@@ -20,7 +20,7 @@ go get -u github.com/akyoto/readme/...
 readme
 ```
 
-Generates `README.md` files for every subdirectory that has a `.readme.md` file.
+Generates `README.md` files for every subdirectory that has a `README.src.md` file.
 
 ## Patrons
 

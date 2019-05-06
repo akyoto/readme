@@ -12,4 +12,6 @@ Readme generator.
 readme
 ```
 
+Generates `README.md` files for every subdirectory that has a `README.src.md` file.
+
 {go:footer}
