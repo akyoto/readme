@@ -48,6 +48,10 @@ go:install
 
 Installation instructions for Go projects.
 
+## Coding style
+
+Please take a look at the [style guidelines](https://github.com/akyoto/quality/blob/master/STYLE.md) if you'd like to make a pull request.
+
 ## Patrons
 
 | [![Scott Rayapoullé](https://avatars3.githubusercontent.com/u/11772084?s=70&v=4)](https://github.com/soulcramer) |
