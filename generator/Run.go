@@ -23,6 +23,7 @@ func Run(templatePath string, outputPath string) error {
 
 	// Find remote URL and relative path
 	cmd := exec.Command("git", "config", "--get", "remote.origin.url")
+	cmd.Dir = directory
 	output, err := cmd.Output()
 
 	if err != nil {
