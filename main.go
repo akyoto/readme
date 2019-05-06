@@ -5,9 +5,8 @@ import (
 	"path"
 	"path/filepath"
 
+	"github.com/akyoto/color"
 	"github.com/akyoto/readme/generator"
-
-	"github.com/fatih/color"
 )
 
 func main() {
@@ -27,7 +26,7 @@ func main() {
 			return nil
 		}
 
-		if info.Name() == ".readme.md" {
+		if info.Name() == "README.src.md" {
 			directory := filepath.Dir(fullPath)
 			_ = generator.Run(fullPath, path.Join(directory, "README.md"))
 		}
