@@ -47,25 +47,50 @@ func Run(templatePath string, outputPath string) error {
 	header = strings.TrimSpace(header)
 	header = strings.ReplaceAll(header, "\t", "")
 
+	sponsors := []Person{
+		{
+			Name:        "Scott Rayapoullé",
+			ImageSource: "https://avatars3.githubusercontent.com/u/11772084?s=70&v=4",
+			ImageLink:   "https://github.com/soulcramer",
+			Link:        "https://github.com/soulcramer",
+		},
+		{
+			Name:        "Eduard Urbach",
+			ImageSource: "https://avatars2.githubusercontent.com/u/438936?s=70&v=4",
+			ImageLink:   "https://twitter.com/eduardurbach",
+			Link:        "https://eduardurbach.com",
+		},
+	}
+
+	tableHeader := strings.Builder{}
+	tableSeparator := strings.Builder{}
+	tableFooter := strings.Builder{}
+
+	for index, sponsor := range sponsors {
+		fmt.Fprintf(&tableHeader, "[![%s](%s)](%s)", sponsor.Name, sponsor.ImageSource, sponsor.ImageLink)
+		tableSeparator.WriteString("---")
+		fmt.Fprintf(&tableFooter, "[%s](%s)", sponsor.Name, sponsor.Link)
+
+		if index != len(sponsors)-1 {
+			tableHeader.WriteString(" | ")
+			tableSeparator.WriteString(" | ")
+			tableFooter.WriteString(" | ")
+		}
+	}
+
 	// Footer
-	footer := `
-		## Coding style
+	footer := fmt.Sprintf(`
+		## Style
 
 		Please take a look at the [style guidelines](https://github.com/akyoto/quality/blob/master/STYLE.md) if you'd like to make a pull request.
 
-		## Patrons
+		## Sponsors
 
-		| [![Scott Rayapoullé](https://avatars3.githubusercontent.com/u/11772084?s=70&v=4)](https://github.com/soulcramer) |
-		|---|
-		| [Scott Rayapoullé](https://github.com/soulcramer) |
+		| %s |
+		| %s |
+		| %s |
 		
 		Want to see [your own name here](https://www.patreon.com/eduardurbach)?
-		
-		## Author
-		
-		| [![Eduard Urbach on Twitter](https://gravatar.com/avatar/16ed4d41a5f244d1b10de1b791657989?s=70)](https://twitter.com/eduardurbach "Follow @eduardurbach on Twitter") |
-		|---|
-		| [Eduard Urbach](https://eduardurbach.com) |
 		
 		[godoc-image]: https://godoc.org/github.com/{relativePath}?status.svg
 		[godoc-url]: https://godoc.org/github.com/{relativePath}
@@ -77,7 +102,8 @@ func Run(templatePath string, outputPath string) error {
 		[coverage-url]: https://codecov.io/gh/{relativePath}
 		[patreon-image]: https://img.shields.io/badge/patreon-donate-green.svg
 		[patreon-url]: https://www.patreon.com/eduardurbach
-	`
+	`, tableHeader.String(), tableSeparator.String(), tableFooter.String())
+
 	footer = strings.TrimSpace(footer)
 	footer = strings.ReplaceAll(footer, "\t", "")
 	footer = strings.ReplaceAll(footer, "{relativePath}", relativePath)
