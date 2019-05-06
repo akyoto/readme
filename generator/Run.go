@@ -90,7 +90,7 @@ func Run(templatePath string, outputPath string) error {
 		| %s |
 		| %s |
 		
-		Want to see [your own name here](https://www.patreon.com/eduardurbach)?
+		Want to see [your own name here?](https://www.patreon.com/eduardurbach)
 		
 		[godoc-image]: https://godoc.org/github.com/{relativePath}?status.svg
 		[godoc-url]: https://godoc.org/github.com/{relativePath}

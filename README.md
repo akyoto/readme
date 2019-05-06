@@ -58,7 +58,7 @@ Please take a look at the [style guidelines](https://github.com/akyoto/quality/b
 | --- | --- |
 | [Scott Rayapoullé](https://github.com/soulcramer) | [Eduard Urbach](https://eduardurbach.com) |
 
-Want to see [your own name here](https://www.patreon.com/eduardurbach)?
+Want to see [your own name here?](https://www.patreon.com/eduardurbach)
 
 [godoc-image]: https://godoc.org/github.com/akyoto/readme?status.svg
 [godoc-url]: https://godoc.org/github.com/akyoto/readme
