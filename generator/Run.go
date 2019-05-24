@@ -43,7 +43,7 @@ func Run(templatePath string, outputPath string) error {
 		[![Report][report-image]][report-url]
 		[![Tests][tests-image]][tests-url]
 		[![Coverage][coverage-image]][coverage-url]
-		[![Patreon][patreon-image]][patreon-url]
+		[![Sponsor][sponsor-image]][sponsor-url]
 	`
 	header = strings.TrimSpace(header)
 	header = strings.ReplaceAll(header, "\t", "")
@@ -97,7 +97,7 @@ func Run(templatePath string, outputPath string) error {
 		| %s |
 		| %s |
 		
-		Want to see [your own name here?](https://www.patreon.com/eduardurbach)
+		Want to see [your own name here?](https://github.com/users/akyoto/sponsorship)
 		
 		[godoc-image]: https://godoc.org/github.com/{relativePath}?status.svg
 		[godoc-url]: https://godoc.org/github.com/{relativePath}
@@ -107,8 +107,8 @@ func Run(templatePath string, outputPath string) error {
 		[tests-url]: https://cloud.drone.io/{relativePath}
 		[coverage-image]: https://codecov.io/gh/{relativePath}/graph/badge.svg
 		[coverage-url]: https://codecov.io/gh/{relativePath}
-		[patreon-image]: https://img.shields.io/badge/patreon-donate-green.svg
-		[patreon-url]: https://www.patreon.com/eduardurbach
+		[sponsor-image]: https://img.shields.io/badge/github-donate-green.svg
+		[sponsor-url]: https://github.com/users/akyoto/sponsorship
 	`, tableHeader.String(), tableSeparator.String(), tableFooter.String())
 
 	footer = strings.TrimSpace(footer)
