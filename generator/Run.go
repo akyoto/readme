@@ -50,6 +50,12 @@ func Run(templatePath string, outputPath string) error {
 
 	sponsors := []Person{
 		{
+			Name:        "Cedric Fung",
+			ImageSource: "https://avatars3.githubusercontent.com/u/2269238?s=70&v=4",
+			ImageLink:   "https://github.com/cedricfung",
+			Link:        "https://github.com/cedricfung",
+		},
+		{
 			Name:        "Scott Rayapoullé",
 			ImageSource: "https://avatars3.githubusercontent.com/u/11772084?s=70&v=4",
 			ImageLink:   "https://github.com/soulcramer",
@@ -57,7 +63,7 @@ func Run(templatePath string, outputPath string) error {
 		},
 		{
 			Name:        "Eduard Urbach",
-			ImageSource: "https://avatars2.githubusercontent.com/u/438936?s=70&v=4",
+			ImageSource: "https://avatars3.githubusercontent.com/u/438936?s=70&v=4",
 			ImageLink:   "https://twitter.com/eduardurbach",
 			Link:        "https://eduardurbach.com",
 		},
