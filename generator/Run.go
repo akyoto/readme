@@ -49,11 +49,11 @@ func Run(templatePath string, outputPath string) error {
 	header = strings.ReplaceAll(header, "\t", "")
 
 	sponsors := []Person{
-		{
-			Name:        "Max Räche",
-			ImageSource: "https://avatars3.githubusercontent.com/u/39157397?s=70&v=4",
-			Link:        "https://github.com/yukinamida",
-		},
+		// {
+		// 	Name:        "Max Räche",
+		// 	ImageSource: "https://avatars3.githubusercontent.com/u/39157397?s=70&v=4",
+		// 	Link:        "https://github.com/yukinamida",
+		// },
 		{
 			Name:        "Cedric Fung",
 			ImageSource: "https://avatars3.githubusercontent.com/u/2269238?s=70&v=4",
