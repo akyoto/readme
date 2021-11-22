@@ -54,21 +54,21 @@ func Run(templatePath string, outputPath string) error {
 		// 	ImageSource: "https://avatars3.githubusercontent.com/u/39157397?s=70&v=4",
 		// 	Link:        "https://github.com/yukinamida",
 		// },
-		{
-			Name:        "Cedric Fung",
-			ImageSource: "https://avatars3.githubusercontent.com/u/2269238?s=70&v=4",
-			Link:        "https://github.com/cedricfung",
-		},
-		{
-			Name:        "Scott Rayapoullé",
-			ImageSource: "https://avatars3.githubusercontent.com/u/11772084?s=70&v=4",
-			Link:        "https://github.com/soulcramer",
-		},
-		{
-			Name:        "Eduard Urbach",
-			ImageSource: "https://avatars3.githubusercontent.com/u/438936?s=70&v=4",
-			Link:        "https://eduardurbach.com",
-		},
+		// {
+		// 	Name:        "Cedric Fung",
+		// 	ImageSource: "https://avatars3.githubusercontent.com/u/2269238?s=70&v=4",
+		// 	Link:        "https://github.com/cedricfung",
+		// },
+		// {
+		// 	Name:        "Scott Rayapoullé",
+		// 	ImageSource: "https://avatars3.githubusercontent.com/u/11772084?s=70&v=4",
+		// 	Link:        "https://github.com/soulcramer",
+		// },
+		// {
+		// 	Name:        "Eduard Urbach",
+		// 	ImageSource: "https://avatars3.githubusercontent.com/u/438936?s=70&v=4",
+		// 	Link:        "https://eduardurbach.com",
+		// },
 	}
 
 	tableHeader := strings.Builder{}
@@ -89,18 +89,6 @@ func Run(templatePath string, outputPath string) error {
 
 	// Footer
 	footer := fmt.Sprintf(`
-		## Style
-
-		Please take a look at the [style guidelines](https://github.com/akyoto/quality/blob/master/STYLE.md) if you'd like to make a pull request.
-
-		## Sponsors
-
-		| %s |
-		| %s |
-		| %s |
-		
-		Want to see [your own name here?](https://github.com/users/akyoto/sponsorship)
-		
 		[godoc-image]: https://godoc.org/github.com/{relativePath}?status.svg
 		[godoc-url]: https://godoc.org/github.com/{relativePath}
 		[report-image]: https://goreportcard.com/badge/github.com/{relativePath}
@@ -111,7 +99,7 @@ func Run(templatePath string, outputPath string) error {
 		[coverage-url]: https://codecov.io/gh/{relativePath}
 		[sponsor-image]: https://img.shields.io/badge/github-donate-green.svg
 		[sponsor-url]: https://github.com/users/akyoto/sponsorship
-	`, tableHeader.String(), tableSeparator.String(), tableFooter.String())
+	`)
 
 	footer = strings.TrimSpace(footer)
 	footer = strings.ReplaceAll(footer, "\t", "")
